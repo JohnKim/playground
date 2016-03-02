@@ -88,5 +88,41 @@ describe('immutability', () => {
   });
 
 
+  describe('a tree (update)', () => {
+
+    let addMovie = (currentState, movie) => {
+      // https://facebook.github.io/immutable-js/docs/#/List/update
+      return currentState.update('movies', (movies) => {
+        return movies.clear().push(movie);
+      });
+    };
+
+    it('is immutable', () => {
+      let state = Map({
+        movies: List.of('Trainspotting', '28 Days Later')
+      });
+      let nextState = addMovie(state, 'Sunshine');
+
+      console.log('BEFORE : ', state);
+      console.log('AFTER  : ', nextState);
+
+      expect(nextState).to.equal(Map({
+        movies: List.of(
+          'Sunshine'
+        )
+      }));
+
+      expect(state).to.equal(Map({
+        movies: List.of(
+          'Trainspotting',
+          '28 Days Later'
+        )
+      }));
+
+    });
+
+  });
+
+
 
 });
