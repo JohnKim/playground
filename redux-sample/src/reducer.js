@@ -1,8 +1,8 @@
 // reducer : takes any kind of action - along with the current state - and invokes the core function that matches the action.
 
-import {setEntries, next, vote} from './core';
+import {setEntries, next, vote, INITIAL_STATE} from './core';
 
-export default function reducer(state, action) {
+export default function reducer(state = INITIAL_STATE, action) {
   // Figure out which function to call and call it
 
   switch (action.type) {
