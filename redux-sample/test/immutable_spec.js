@@ -34,8 +34,8 @@ describe('immutability', () => {
       let state = List.of('Trainspotting', '28 Days Later');
       let nextState = addMovie(state, 'Sunshine');
 
-      console.log('BEFORE : ', state);
-      console.log('AFTER  : ', nextState);
+      //console.log('BEFORE : ', state);
+      //console.log('AFTER  : ', nextState);
 
       expect(nextState).to.equal(List.of(
         'Trainspotting',
@@ -67,8 +67,8 @@ describe('immutability', () => {
       });
       let nextState = addMovie(state, 'Sunshine');
 
-      console.log('BEFORE : ', state);
-      console.log('AFTER  : ', nextState);
+      //console.log('BEFORE : ', state);
+      //console.log('AFTER  : ', nextState);
 
       expect(nextState).to.equal(Map({
         movies: List.of(
