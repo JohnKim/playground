@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Please read: https://msdn.microsoft.com/en-us/library/ie/dn455106.aspx -->
+<!-- <wide310x150logo src="????"/> -->
+<browserconfig><msapplication><tile><square70x70logo src="/images/ms-icon-70x70.png"/><square150x150logo src="/images/images/ms-icon-150x150.png"/><square310x310logo src="/images/ms-icon-310x310.png"/><TileColor>#ffffff</TileColor></tile></msapplication></browserconfig>
